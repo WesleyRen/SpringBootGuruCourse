@@ -33,6 +33,7 @@ public class DevBootStrap implements ApplicationListener<ContextRefreshedEvent> 
         //Eric
         Author eric =  new Author("Eric", "Evans");
         Publisher publisherA = new Publisher("A Pub", "A Street");
+        publisherA.setName("foo");
         Book ddd = new Book("Domain Driven Design", "1234", publisherA);
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
@@ -44,6 +45,7 @@ public class DevBootStrap implements ApplicationListener<ContextRefreshedEvent> 
         //rod
         Author rod =  new Author("Rod", "Johnson");
         Publisher publisherB = new Publisher("B Pub", "B Street");
+        publisherB.setName("bar");
         Book noEJB = new Book("J2EE Development without EJB ", "234444", publisherB);
         rod.getBooks().add(noEJB);
         noEJB.getAuthors().add(rod);
